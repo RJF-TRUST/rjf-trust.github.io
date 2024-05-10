@@ -25,4 +25,6 @@ jobs:
 
     - name: deploy github pages
       run: |
+        npm i
+        npm install gh-pages --save-dev
         npm run deploy
