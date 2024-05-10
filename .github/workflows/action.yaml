@@ -1,0 +1,28 @@
+name: pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
+      - '.github/*'
+      - '.gitignore'
+
+  pull_request:
+    branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
+      - '.github/*'
+      - '.gitignore'
+
+jobs:
+  dev-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: deploy github pages
+      run: |
+        npm run deploy
