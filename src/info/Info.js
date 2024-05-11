@@ -1,5 +1,4 @@
 import self from "../img/self.png"
-import mock1 from "../img/mock1.png"
 import mock2 from "../img/mock2.png"
 import mock3 from "../img/mock3.png"
 import mock4 from "../img/mock4.png"
@@ -90,7 +89,7 @@ export const info = {
     skills:
         {
             proficientWith: ['terraform', 'aws cdk', 'aws cloudformation','kubernetes', 'docker', 'ci/cd pipelines', 'github', 'control tower', 'automation', 'azure'],
-            exposedTo: ['nodejs', 'python', 'react', 'typescript']
+            exposedTo: ['nodejs', 'python', 'java', 'typescript']
         }
     ,
     hobbies: [
@@ -119,6 +118,24 @@ export const info = {
             live: "https://jacky.fan.nz/",
             source: "https://github.com/RJF-TRUST/rjf-trust.github.io",
             image: mock2
+        },
+        {
+            title: "AWS CDK workshop",
+            live: "https://repost.aws/knowledge-center/cdk-cross-stack-reference",
+            source: "https://github.com/aws-6w8hnx/cdk-workshop-cross-stack-reference",
+            image: mock4
+        },
+        {
+            title: "AWS CodeDeploy workshop",
+            live: "https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorials.html",
+            source: "https://github.com/aws-6w8hnx/code-workshop-ecs-lambda-codedeploy",
+            image: mock4
+        },
+        {
+            title: "AWS Control Tower AFT workshop",
+            live: "https://docs.aws.amazon.com/controltower/latest/userguide/aft-architecture.html",
+            source: "https://github.com/aws-6w8hnx/controltower-workshop-aft",
+            image: mock3
         },
     ]
 }
