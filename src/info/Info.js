@@ -114,9 +114,9 @@ export const info = {
     ],
     portfolio: [ // This is where your portfolio projects will be detailed
         {
-            title: "Jacky's portfolio",
+            title: "Jacky F | Portfolio",
             live: "https://jacky.fan.nz/",
-            source: "https://github.com/RJF-TRUST/rjf-trust.github.io",
+            source: "https://github.com/fanq10/fanq10.github.io/tree/main",
             image: mock2
         },
         {
