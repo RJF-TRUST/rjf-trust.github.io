@@ -40,7 +40,7 @@ export const info = {
         },
         {
             emoji: '🌎',
-            text: 'based in the NZ'
+            text: 'based in the Aotearoa'
         },
         {
             emoji: "💼",
@@ -48,7 +48,7 @@ export const info = {
         },
         {
             emoji: "🏆",
-            text: "CloudFormation SME | CodeSuite SME"
+            text: "🏅 CloudFormation SME | 🏅 CodeSuite SME"
         },
         {
             emoji: "📧",
