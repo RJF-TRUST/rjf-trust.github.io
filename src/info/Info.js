@@ -48,7 +48,7 @@ export const info = {
         },
         {
             emoji: "🏆",
-            text: "🏅 CloudFormation SME | 🏅 CodeSuite SME"
+            text: "🏅 CloudFormation SME 🏅 CodeSuite SME 🏅"
         },
         {
             emoji: "📧",
