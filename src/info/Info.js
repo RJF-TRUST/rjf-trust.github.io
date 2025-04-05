@@ -48,15 +48,15 @@ export const info = {
         },
         {
             emoji: "🏆",
-            text: "🏅 CloudFormation SME"
+            text: "AWS CloudFormation SME"
         },
         {
             emoji: "🏆",
-            text: "🏅 CodeSuite SME"
+            text: "AWS CodeSuite SME"
         },
         {
             emoji: "🏆",
-            text: "🏅 Control Tower SME"
+            text: "AWS Control Tower SME"
         },
         {
             emoji: "📧",
