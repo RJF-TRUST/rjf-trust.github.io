@@ -48,7 +48,15 @@ export const info = {
         },
         {
             emoji: "🏆",
-            text: "🏅 CloudFormation SME 🏅 CodeSuite SME 🏅"
+            text: "🏅 CloudFormation SME 🏅"
+        },
+        {
+            emoji: "🏆🏆",
+            text: "🏅 CodeSuite SME 🏅"
+        },
+        {
+            emoji: "🏆🏆🏆",
+            text: "🏅 Control Tower SME 🏅"
         },
         {
             emoji: "📧",
