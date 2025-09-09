@@ -43,5 +43,22 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Deploy
-        run: npm run deploy
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository (or specify your build directory)
+          path: '.'
+          # If you have a build directory, use this instead:
+          # path: './dist'  # or './build' or './_site' for Jekyll
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
