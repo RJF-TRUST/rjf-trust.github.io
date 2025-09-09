@@ -47,6 +47,10 @@ export const info = {
             text: "Cloud Engineer at Amazon Web Services"
         },
         {
+            emoji: "🐳",
+            text: "Kubestronaut"
+        },
+        {
             emoji: "🏆",
             text: "AWS CloudFormation SME"
         },
