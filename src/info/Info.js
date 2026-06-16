@@ -64,7 +64,7 @@ export const info = {
         },
         {
             emoji: "🏆",
-            text: "Amazon EKS SME"
+            text: "AWS Elastic Kubernetes Service (EKS) SME"
         },
         {
             emoji: "📧",
