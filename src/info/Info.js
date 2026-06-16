@@ -101,10 +101,10 @@ export const info = {
 // Just change the links so that they lead to your social profiles.
 
     ],
-    bio: "Hello! I'm Jacky. I'm a cloud engineer for Amazon. I studied CompSci at Auckland University of Technology, I enjoy skiing on snow mountains and exploring alpine scenery, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
+    bio: "Hello! I'm Jacky. I'm a Senior cloud engineer working for Amazon Web Services. I studied CompSci at Auckland University of Technology, I enjoy skiing on snow mountains and exploring alpine scenery, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
     skills:
         {
-            proficientWith: ['terraform', 'aws cdk', 'aws cloudformation','kubernetes', 'docker', 'ci/cd pipelines', 'github', 'control tower', 'automation', 'azure'],
+            proficientWith: ['kubernetes','docker','terraform','aws cdk', 'aws cloudformation','ci/cd pipelines','github/gitlab','aws control tower', 'automation', 'microsoft azure'],
             exposedTo: ['nodejs', 'python', 'java', 'typescript']
         }
     ,
