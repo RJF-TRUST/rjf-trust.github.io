@@ -40,11 +40,11 @@ export const info = {
         },
         {
             emoji: '🌎',
-            text: 'based in the Aotearoa'
+            text: 'based in the Warrane, Australia'
         },
         {
             emoji: "💼",
-            text: "Cloud Engineer at Amazon Web Services"
+            text: "Sr Cloud Engineer at Amazon Web Services"
         },
         {
             emoji: "🐳",
@@ -61,6 +61,10 @@ export const info = {
         {
             emoji: "🏆",
             text: "AWS Control Tower SME"
+        },
+        {
+            emoji: "🏆",
+            text: "Amazon EKS SME"
         },
         {
             emoji: "📧",
