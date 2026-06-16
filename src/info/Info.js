@@ -44,7 +44,7 @@ export const info = {
         },
         {
             emoji: "💼",
-            text: "Sr Cloud Engineer at Amazon Web Services"
+            text: "Amazon Web Services"
         },
         {
             emoji: "🐳",
