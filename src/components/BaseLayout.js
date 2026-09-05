@@ -50,7 +50,7 @@ export default function BaseLayout() {
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                   py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
                   <p>portfolio created &#10000; by <a href={'https://jacky.fan.nz/'}>Jacky Fan</a></p>
-                  <p>copyright© 2024</p>
+                  <p>copyright© 2026</p>
                </Box>
             </Grid>
          </Grid>
