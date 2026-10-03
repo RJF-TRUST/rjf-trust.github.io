@@ -35,18 +35,17 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: npm
       
       - name: Install dependencies
-        run: npm update
+        run: corepack yarn install --frozen-lockfile
       
       - name: Build
-        run: npm run build
+        run: corepack yarn build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './build'
+          path: './dist'
 
   # Deployment job
   deploy:
