@@ -2,6 +2,10 @@
 name: Deploy to GitHub Pages
 
 on:
+  pull_request:
+    branches:
+      - main
+
   # Trigger the workflow on push to main branch
   push:
     branches:
@@ -43,12 +47,14 @@ jobs:
         run: corepack yarn build
         
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: './dist'
 
   # Deployment job
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
