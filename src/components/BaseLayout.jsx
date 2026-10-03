@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Style from './BaseLayout.module.scss'
-import Navbar from "./Navbar";
-import { useLocation } from "react-router-dom";
-import { Box, Grid } from "@mui/material";
+import Navbar from './Navbar';
+import { Box, Grid } from '@mui/material';
 import MultiPageRoutes from './MultiPageRoutes';
 import { singlePage } from '../info/Info';
 import SinglePageRoutes from './SinglePageRoutes';
 import useScrollObserver from '../hooks/useScrollObserver';
 
 export default function BaseLayout() {
-   const location = useLocation()
-
-   const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
+   const pathname = window.location.pathname;
+   const [active, setActive] = useState(pathname === '/' ? 'home' : pathname.slice(1));
    const refHome = useScrollObserver(setActive);
    const refAbout = useScrollObserver(setActive);
    const refPortfolio = useScrollObserver(setActive);

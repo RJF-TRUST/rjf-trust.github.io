@@ -2,6 +2,10 @@
 name: Deploy to GitHub Pages
 
 on:
+  pull_request:
+    branches:
+      - main
+
   # Trigger the workflow on push to main branch
   push:
     branches:
@@ -35,21 +39,22 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: npm
       
       - name: Install dependencies
-        run: npm update
+        run: corepack yarn install --frozen-lockfile
       
       - name: Build
-        run: npm run build
+        run: corepack yarn build
         
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './build'
+          path: './dist'
 
   # Deployment job
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
