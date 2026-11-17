@@ -33,11 +33,13 @@
 }
 
 // Links use the Terminal's colour-cycling animation (`.terminal a`). Stop it
-// for visitors who ask their OS for reduced motion.
+// for visitors who ask their OS for reduced motion, and give them a static
+// light colour instead of the site's dark default link colour.
 @media (prefers-reduced-motion: reduce) {
   .links .link,
   .links .link:visited {
     animation: none;
+    color: $white;
   }
 }
 
