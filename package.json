@@ -33,7 +33,7 @@
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@rollup/plugin-terser": "^1.0.0",
     "@vitejs/plugin-react": "6.1.1",
-    "vite": "8.3.2"
+    "vite": "8.3.3"
   },
   "overrides": {
     "nth-check": "^2.1.1",
