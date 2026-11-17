@@ -27,12 +27,12 @@ export default function About({innerRef}) {
             <p><span style={{color: info.baseColor}}>skills/tools <span
                 className={Style.green}>(main)</span> $</span> ls</p>
             {info.skills.map(({category, items}) => (
-                <React.Fragment key={category}>
-                    <p style={{color: info.baseColor}}>{category}/</p>
+                <div key={category} className={Style.skillGroup}>
+                    <p className={Style.category} style={{color: info.baseColor}}>{category}/</p>
                     <ul className={Style.skills}>
                         {items.map((item) => <li key={item}>{item}</li>)}
                     </ul>
-                </React.Fragment>
+                </div>
             ))}
         </>;
     }

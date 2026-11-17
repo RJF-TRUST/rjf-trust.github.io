@@ -8,14 +8,31 @@
   color: $green;
 }
 
+// One skill category: a heading kept close to its own list, with a slightly
+// larger gap before the next category.
+.skillGroup {
+  margin-top: 1.25rem;
+
+  // .skillGroup .category outranks `.terminal p`, which adds 1rem above and below.
+  .category {
+    margin: 0 0 0.25rem;
+  }
+}
+
 .skills {
   columns: 1;
   @media only screen and (min-width: 940px) {
     columns: 2;
   }
+}
 
-  li {
-    margin: 0;
-    line-height: 1.75;
-  }
+// ul.skills > li outranks `.terminal li`, which otherwise adds a 1rem margin
+// above and below every item. The hanging indent keeps a wrapped item visibly
+// one entry, and break-inside stops an item splitting across the two columns.
+ul.skills > li {
+  margin: 0;
+  line-height: 1.5;
+  padding-left: 1.5ch;
+  text-indent: -1.5ch;
+  break-inside: avoid;
 }
