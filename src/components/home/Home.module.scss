@@ -18,6 +18,11 @@ h2 {
   }
 }
 
+// Shrink the avatar around its own centre. transform does not affect layout,
+// so the circle's centre and the surrounding text stay exactly where they were.
+.avatar {
+  transform: scale(0.7);
+}
 
 .hand {
   animation-name: wave;
