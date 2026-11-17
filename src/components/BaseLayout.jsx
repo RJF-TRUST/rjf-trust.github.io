@@ -12,7 +12,7 @@ export default function BaseLayout() {
    const [active, setActive] = useState(pathname === '/' ? 'home' : pathname.slice(1));
    const refHome = useScrollObserver(setActive);
    const refAbout = useScrollObserver(setActive);
-   const refPortfolio = useScrollObserver(setActive);
+   const refContact = useScrollObserver(setActive);
    let [darkMode, setDarkMode] = useState(false);
 
 
@@ -42,7 +42,7 @@ export default function BaseLayout() {
                <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} active={active} setActive={setActive} />
             </Grid>
             <Grid item flexGrow={1}>
-               {singlePage ? <SinglePageRoutes refs={{refHome, refAbout, refPortfolio}}/> : <MultiPageRoutes />}
+               {singlePage ? <SinglePageRoutes refs={{refHome, refAbout, refContact}}/> : <MultiPageRoutes />}
             </Grid>
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}

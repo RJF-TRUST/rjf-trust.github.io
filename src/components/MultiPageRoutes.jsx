@@ -2,12 +2,12 @@ import React from 'react';
 
 import About from './about/About';
 import Home from './home/Home';
-import Portfolio from './portfolio/Portfolio';
+import Contact from './contact/Contact';
 
 const routes = {
   '/': <Home />,
   '/about': <About />,
-  '/portfolio': <Portfolio />,
+  '/contact': <Contact />,
 };
 
 export default function MultiPageRoutes() {

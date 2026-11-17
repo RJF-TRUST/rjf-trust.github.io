@@ -1,7 +1,4 @@
 import self from "../img/self.png"
-import mock2 from "../img/mock2.png"
-import mock3 from "../img/mock3.png"
-import mock4 from "../img/mock4.png"
 
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
@@ -101,13 +98,37 @@ export const info = {
 // Just change the links so that they lead to your social profiles.
 
     ],
-    bio: "Hello! I'm Jacky. I'm a Senior cloud engineer working for Amazon Web Services. I studied CompSci at Auckland University of Technology, I enjoy skiing on snow mountains and exploring alpine scenery, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
-    skills:
+    bio: [
+        "Hi, I'm Jacky, a Senior Cloud Engineer at Amazon Web Services. I work with AWS customers on Kubernetes (Amazon EKS), infrastructure as code and CI/CD, and I'm an AWS Subject Matter Expert for EKS, CloudFormation, CodeSuite and Control Tower.",
+        "I'm also a CNCF Kubestronaut. Outside work I run a self-hosted Kubernetes platform at home, where I try out GitOps, service mesh and platform engineering tools hands-on.",
+        "I studied Computer Science at Auckland University of Technology. When I'm away from the keyboard I'm usually skiing, photographing the mountains or cooking. I'm also convinced AI will run the world one day, so I'm learning to work with it early."
+    ],
+    skills: [ // each category renders as a directory in the "skills/tools" terminal on the About page
         {
-            proficientWith: ['kubernetes','docker','terraform','aws cdk', 'aws cloudformation','ci/cd pipelines','github/gitlab','aws control tower', 'automation', 'microsoft azure'],
-            exposedTo: ['nodejs', 'python', 'java', 'typescript']
+            category: 'cloud',
+            items: ['Amazon EKS', 'AWS Control Tower & AFT', 'AWS CodeSuite', 'Microsoft Azure']
+        },
+        {
+            category: 'cloud-native',
+            items: ['Kubernetes', 'Helm', 'Cilium', 'Istio', 'Kyverno', 'Prometheus', 'Backstage', 'CRI-O & Docker']
+        },
+        {
+            category: 'gitops-and-ci-cd',
+            items: ['Argo CD', 'Flux CD', 'GitHub Actions', 'GitLab CI/CD']
+        },
+        {
+            category: 'infrastructure-as-code',
+            items: ['Terraform', 'AWS CDK', 'AWS CloudFormation', 'Ansible']
+        },
+        {
+            category: 'systems',
+            items: ['Linux (Debian, Ubuntu)', 'VMware vSphere', 'PostgreSQL']
+        },
+        {
+            category: 'languages',
+            items: ['Python', 'Bash', 'TypeScript / Node.js', 'Java']
         }
-    ,
+    ],
     hobbies: [
         {
             label: 'travel',
@@ -128,30 +149,27 @@ export const info = {
 // Same as above, change the emojis to match / relate to your hobbies or interests.
 // You can also remove the emojis if you'd like, I just think they look cute :P
     ],
-    portfolio: [ // This is where your portfolio projects will be detailed
-        {
-            title: "Jacky F | Portfolio",
-            live: "https://jacky.fan.nz/",
-            source: "https://github.com/fanq10/fanq10.github.io/tree/main",
-            image: mock2
-        },
-        {
-            title: "AWS CDK workshop",
-            live: "https://repost.aws/knowledge-center/cdk-cross-stack-reference",
-            source: "https://github.com/aws-6w8hnx/cdk-workshop-cross-stack-reference",
-            image: mock4
-        },
-        {
-            title: "AWS CodeDeploy workshop",
-            live: "https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorials.html",
-            source: "https://github.com/aws-6w8hnx/code-workshop-ecs-lambda-codedeploy",
-            image: mock4
-        },
-        {
-            title: "AWS Control Tower AFT workshop",
-            live: "https://docs.aws.amazon.com/controltower/latest/userguide/aft-architecture.html",
-            source: "https://github.com/aws-6w8hnx/controltower-workshop-aft",
-            image: mock3
-        },
-    ]
+    contact: { // shown on the Contact Me page; email uses a mailto: link, the others open in a new tab
+        intro: "Happy to chat about Kubernetes, platform engineering or AWS. Email or LinkedIn is the fastest way to reach me.",
+        links: [
+            {
+                id: 'linkedin',
+                label: 'LinkedIn',
+                text: 'linkedin.com/in/fanq10',
+                link: 'https://www.linkedin.com/in/fanq10/'
+            },
+            {
+                id: 'credly',
+                label: 'Credly',
+                text: 'credly.com/users/fanq10',
+                link: 'https://www.credly.com/users/fanq10/badges/credly'
+            },
+            {
+                id: 'email',
+                label: 'Email',
+                text: 'jacky@fan.nz',
+                link: 'mailto:jacky@fan.nz'
+            }
+        ]
+    }
 }
