@@ -32,13 +32,13 @@
   }
 }
 
-// Turn off the Terminal's colour-cycling link animation for contact links.
-// The extra .links class outranks `.terminal a` and `.terminal a:visited`.
-.links .link,
-.links .link:visited,
-.links .link:hover {
-  animation: none;
-  color: $white;
+// Links use the Terminal's colour-cycling animation (`.terminal a`). Stop it
+// for visitors who ask their OS for reduced motion.
+@media (prefers-reduced-motion: reduce) {
+  .links .link,
+  .links .link:visited {
+    animation: none;
+  }
 }
 
 .icon {
