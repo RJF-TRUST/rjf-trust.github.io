@@ -22,8 +22,7 @@ function ContactLink({id, label, text, link}) {
     return (
         <li>
             <a href={link} className={Style.link} {...externalProps}>
-                {Icon && <Icon className={Style.icon} fontSize={'inherit'} aria-hidden={'true'}
-                               style={{color: info.baseColor}}/>}
+                {Icon && <Icon className={Style.icon} fontSize={'inherit'} aria-hidden={'true'}/>}
                 <span className={Style.value}>{text}</span>
             </a>
         </li>
