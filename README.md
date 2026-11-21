@@ -65,7 +65,7 @@ There is no automated test suite; `corepack yarn test` only prints a message. Be
 
 ## Deploy
 
-`.github/workflows/deploy-pages.yaml` builds every pull request to `main`. A push to `main`, or a manual run of the workflow from `main`, builds and deploys to GitHub Pages. The custom domain comes from `CNAME`.
+`.github/workflows/deploy-pages.yaml` builds every pull request to `main`. A push to `main`, or a manual run of the workflow from `main`, builds and deploys to GitHub Pages. The custom domain is set in the repository's Settings → Pages; the root `CNAME` file is not part of the deployed build.
 
 ## Public repository
 
