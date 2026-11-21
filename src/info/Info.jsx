@@ -1,3 +1,4 @@
+import {Facebook, GitHub, Instagram, LinkedIn, X} from "@mui/icons-material";
 import self from "../img/self.png"
 
 
@@ -71,30 +72,31 @@ export const info = {
     socials: [
         {
             link: "https://www.facebook.com/fanq10",
-            icon: 'fa fa-facebook',
+            icon: Facebook,
             label: 'facebook'
         },
         {
             link: "https://www.instagram.com/fanq101/",
-            icon: 'fa fa-instagram',
+            icon: Instagram,
             label: 'instagram'
         },
         {
             link: "https://github.com/orgs/aws-6w8hnx/repositories",
-            icon: "fa fa-github",
+            icon: GitHub,
             label: 'github'
         },
         {
             link: "https://www.linkedin.com/in/fanq10/",
-            icon: "fa fa-linkedin",
+            icon: LinkedIn,
             label: 'linkedin'
         },
         {
             link: "https://x.com/fanq10",
-            icon: "fa fa-twitter",
+            icon: X,
             label: 'twitter'
         }
-// Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
+// Feel free to remove any of these that you don't have. `icon` is any component from @mui/icons-material
+// (https://mui.com/material-ui/material-icons/); import it at the top of this file.
 // Just change the links so that they lead to your social profiles.
 
     ],
