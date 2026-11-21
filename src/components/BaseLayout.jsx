@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Style from './BaseLayout.module.scss'
 import Navbar from './Navbar';
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 import MultiPageRoutes from './MultiPageRoutes';
 import { singlePage } from '../info/Info';
 import SinglePageRoutes from './SinglePageRoutes';
@@ -36,23 +36,33 @@ export default function BaseLayout() {
 
    return (
       <Box className={darkMode ? Style.dark : Style.light}>
-         <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
-            justifyContent={'space-between'}>
-            <Grid item>
+         {/* Page shell: navbar, content and footer stacked in a full-height column.
+             MUI 9 removed GridLegacy (`item`), and Grid no longer supports column layouts. */}
+         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+                   minHeight: '100vh', width: '100%'}}>
+            <Box>
                <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} active={active} setActive={setActive} />
-            </Grid>
-            <Grid item flexGrow={1}>
+            </Box>
+            <Box sx={{flexGrow: 1}}>
                {singlePage ? <SinglePageRoutes refs={{refHome, refAbout, refContact}}/> : <MultiPageRoutes />}
-            </Grid>
-            <Grid item>
-               <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
-                  py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
+            </Box>
+            <Box>
+               <Box
+                  component={'footer'}
+                  sx={{
+                     display: 'flex',
+                     flexDirection: 'column',
+                     alignItems: 'center',
+                     py: '1.5rem',
+                     width: '100%',
+                     opacity: 0.7
+                  }}>
                   <p>portfolio created &#10000; by <a href={'https://jacky.fan.nz/'}>Jacky Fan</a></p>
                   <p>copyright© 2026</p>
                </Box>
-            </Grid>
-         </Grid>
+            </Box>
+         </Box>
       </Box>
-   )
+   );
 }
 
