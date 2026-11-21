@@ -2,8 +2,7 @@ import React from 'react';
 import Style from "./Terminal.module.scss";
 import classNames from "classnames";
 import {Box} from "@mui/material";
-
-const iconClass = "fa fa-circle";
+import {Circle} from "@mui/icons-material";
 
 function Terminal(props) {
    const {text} = props;
@@ -24,9 +23,9 @@ function Terminal(props) {
                fontSize: '1rem',
                backgroundColor: '#8c8c8c'
             }}>
-            <i className={classNames(iconClass, Style.red)}/>
-            <i className={classNames(iconClass, Style.amber)}/>
-            <i className={classNames(iconClass, Style.green)}/>
+            <Circle fontSize={'inherit'} aria-hidden={'true'} className={classNames(Style.dot, Style.red)}/>
+            <Circle fontSize={'inherit'} aria-hidden={'true'} className={classNames(Style.dot, Style.amber)}/>
+            <Circle fontSize={'inherit'} aria-hidden={'true'} className={classNames(Style.dot, Style.green)}/>
          </Box>
          <Box
             sx={{

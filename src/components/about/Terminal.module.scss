@@ -1,7 +1,10 @@
 @import "../../variables.modules";
 
-i {
-  padding-left: 0.5rem;
+// Window-control dots in the terminal title bar. margin, not padding: the
+// icon is an <svg> sized 1em, so padding would shrink the circle.
+.dot {
+  margin-left: 0.5rem;
+  vertical-align: middle;
 
   &.red {
     color: $red;
