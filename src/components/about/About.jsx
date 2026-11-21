@@ -38,24 +38,36 @@ export default function About({innerRef}) {
     }
 
     function miscText() {
-        return <>
-            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd
-                hobbies/interests</p>
-            <p><span style={{color: info.baseColor}}>hobbies/interests <span
-                className={Style.green}>(main)</span> $</span> ls</p>
-            <ul>
-                {info.hobbies.map((hobby, index) => (
-                    <li key={index}><Box component={'span'} mr={'1rem'}>{hobby.emoji}</Box>{hobby.label}</li>
-                ))}
-            </ul>
-        </>;
+        return (
+            <>
+                <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd
+                    hobbies/interests</p>
+                <p><span style={{color: info.baseColor}}>hobbies/interests <span
+                    className={Style.green}>(main)</span> $</span> ls</p>
+                <ul>
+                    {info.hobbies.map((hobby, index) => (
+                        <li key={index}><Box component={'span'} sx={{
+                            mr: '1rem'
+                        }}>{hobby.emoji}</Box>{hobby.label}</li>
+                    ))}
+                </ul>
+            </>
+        );
     }
 
     return (
-        <Box ref={innerRef} display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'} id={'about'}>
+        <Box
+            ref={innerRef}
+            id={'about'}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                mt: '3rem'
+            }}>
             <Terminal text={aboutMeText()}/>
             <Terminal text={skillsText()}/>
             <Terminal text={miscText()}/>
         </Box>
-    )
+    );
 }

@@ -41,7 +41,15 @@ export default function Contact({innerRef}) {
     </>;
 
     return (
-        <Box ref={innerRef} display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'} id={'contact'}>
+        <Box
+            ref={innerRef}
+            id={'contact'}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                mt: '3rem'
+            }}>
             <Terminal text={text}/>
         </Box>
     );
