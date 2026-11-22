@@ -10,6 +10,7 @@ import Style from './Icons.module.scss';
  * (https://github.com/mui/material-ui/tree/master/packages/mui-icons-material),
  * MIT License, Copyright (c) 2014 Call-Em-All. Circle, Email and
  * WorkspacePremium are Google Material Icons (Apache License 2.0).
+ * Full licence texts: THIRD_PARTY_NOTICES.md in the repository root.
  * Brand logos are trademarks of their respective owners.
  *
  * Every icon is decorative: the surrounding link carries the accessible name.

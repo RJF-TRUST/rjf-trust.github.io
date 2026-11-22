@@ -27,7 +27,7 @@ Where things live:
 | `src/global.scss` | Global styles (font, resets) |
 | `src/img/` | Images |
 
-Icons are inline SVG components in `src/components/icons/Icons.jsx`. To add one, copy its 24×24 SVG path into that file; the existing paths are copied from [MUI's icon set](https://mui.com/material-ui/material-icons/) (MIT).
+Icons are inline SVG components in `src/components/icons/Icons.jsx`. To add one, copy its 24×24 SVG path into that file; the existing paths are copied from [MUI's icon set](https://mui.com/material-ui/material-icons/) (MIT). Licence texts are in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Test
 
