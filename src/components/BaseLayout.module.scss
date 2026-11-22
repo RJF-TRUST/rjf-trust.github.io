@@ -9,13 +9,12 @@ footer {
   color: $white;
   transition: all 400ms;
 
+  // Covers visited links too: author styles always override the browser's
+  // :visited colour. A separate `a:visited` rule here would outrank `a:hover`
+  // and stop visited links changing colour on hover.
   a, li {
     color: $white;
     transition: color 400ms;
-  }
-
-  a:visited {
-    color: $white;
   }
 
   footer {

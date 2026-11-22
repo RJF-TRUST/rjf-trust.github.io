@@ -47,6 +47,8 @@
   flex-shrink: 0;
 }
 
+// Values wrap at the <wbr> points after each "/". `anywhere` is only the last
+// resort for a segment that still does not fit, so nothing overflows.
 .value {
   overflow-wrap: anywhere;
 }
