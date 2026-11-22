@@ -11,6 +11,13 @@ const icons = {
     email: EmailIcon,
 };
 
+// Allow a line break after each "/" so long addresses wrap at path segments on
+// narrow screens instead of mid-word. <wbr> adds no characters to the text.
+function breakAfterSlashes(text) {
+    return text.split('/').flatMap((part, index, parts) =>
+        index < parts.length - 1 ? [part, '/', <wbr key={index}/>] : [part]);
+}
+
 function ContactLink({id, label, text, link}) {
     const Icon = icons[id];
     const isExternal = !link.startsWith('mailto:');
@@ -22,7 +29,7 @@ function ContactLink({id, label, text, link}) {
         <li>
             <a href={link} className={Style.link} {...externalProps}>
                 {Icon && <Icon className={Style.icon}/>}
-                <span className={Style.value}>{text}</span>
+                <span className={Style.value}>{breakAfterSlashes(text)}</span>
             </a>
         </li>
     );
