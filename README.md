@@ -1,6 +1,6 @@
 # jacky.fan.nz
 
-Source for [jacky.fan.nz](https://jacky.fan.nz), a personal website built with React, MUI and Vite and hosted on GitHub Pages.
+Source for [jacky.fan.nz](https://jacky.fan.nz), a personal website built with React and Vite and hosted on GitHub Pages.
 
 ## Requirements
 
@@ -27,7 +27,7 @@ Where things live:
 | `src/global.scss` | Global styles (font, resets) |
 | `src/img/` | Images |
 
-Icons come from [`@mui/icons-material`](https://mui.com/material-ui/material-icons/).
+Icons are inline SVG components in `src/components/icons/Icons.jsx`. To add one, copy its 24×24 SVG path into that file; the existing paths are copied from [MUI's icon set](https://mui.com/material-ui/material-icons/) (MIT).
 
 ## Test
 

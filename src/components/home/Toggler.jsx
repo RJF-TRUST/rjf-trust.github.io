@@ -1,22 +1,15 @@
 import React from 'react';
-import {Box} from "@mui/material";
+import Style from "./Toggler.module.scss";
 
 export default function Toggler({darkMode, handleClick}) {
-    const transition = 'all 250ms ease'
-
    return (
-      <Box
-         sx={{
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-            ":hover": {transform: 'translateY(-3px)', transition: transition}
-         }}>
+      <div className={Style.toggler}>
          {
             darkMode ?
                <span onClick={handleClick} aria-label="Full Moon" role="img">🌕</span>
                :
                <span onClick={handleClick} aria-label="New Moon" role="img">🌑</span>
          }
-      </Box>
+      </div>
    );
 }

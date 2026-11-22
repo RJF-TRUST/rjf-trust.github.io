@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Style from './Navbar.module.scss';
 import Toggler from './home/Toggler';
-import { Box } from '@mui/material';
+import classNames from 'classnames';
 import { info } from "../info/Info";
 import { singlePage } from '../info/Info';
 
@@ -32,26 +32,11 @@ const links = [
 export default function Navbar({ darkMode, handleClick, active, setActive }) {
 
     return (
-        <Box
-            component={'nav'}
-            className={darkMode? Style.dark : Style.light}
-            sx={{
-                width: '100%',
-                position: singlePage ? 'fixed' : 'relative'
-            }}>
-            <Box
-                component={'ul'}
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: { xs: '2rem', md: '8rem' },
-                    textTransform: 'lowercase',
-                    fontSize: '1rem'
-                }}>
+        <nav className={classNames(darkMode ? Style.dark : Style.light, Style.nav, singlePage && Style.fixed)}>
+            <ul className={Style.links}>
                 {links.map((link, index) => (
-                    <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}
-                        sx={{ borderImageSource: info.gradient }}>
+                    <li key={index} className={(link.active === active && !link.type) ? Style.active : undefined}
+                        style={{ borderImageSource: info.gradient }}>
                         <a
                           href={singlePage ? `#${link.to}` : `/${link.to}`}
                           onClick={() => setActive(link.active)}
@@ -60,12 +45,12 @@ export default function Navbar({ darkMode, handleClick, active, setActive }) {
                             {!link.type && <p style={{ padding: '0.5rem 0' }}>{link.name}</p>}
                             {link.type && <h1>{link.name}</h1>}
                         </a>
-                    </Box>
+                    </li>
                 ))}
                 <li>
                     <Toggler darkMode={darkMode} handleClick={handleClick} />
                 </li>
-            </Box>
-        </Box>
+            </ul>
+        </nav>
     );
 }
