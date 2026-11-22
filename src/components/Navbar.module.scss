@@ -5,6 +5,28 @@ nav {
   z-index: 1;
 }
 
+.nav {
+  position: relative;
+  width: 100%;
+
+  &.fixed {
+    position: fixed;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1rem;
+  text-transform: lowercase;
+
+  @media (min-width: 900px) {
+    gap: 8rem;
+  }
+}
+
 .dark {
   background-color: $dark;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
-import {Email as EmailIcon, LinkedIn as LinkedInIcon, WorkspacePremium as WorkspacePremiumIcon} from '@mui/icons-material';
+import {Email as EmailIcon, LinkedIn as LinkedInIcon, WorkspacePremium as WorkspacePremiumIcon} from '../icons/Icons';
 import Terminal from '../about/Terminal';
 import Style from './Contact.module.scss';
 import {info} from '../../info/Info';
@@ -29,7 +28,7 @@ function ContactLink({id, label, text, link}) {
     return (
         <li>
             <a href={link} className={Style.link} {...externalProps}>
-                {Icon && <Icon className={Style.icon} fontSize={'inherit'} aria-hidden={'true'}/>}
+                {Icon && <Icon className={Style.icon}/>}
                 <span className={Style.value}>{breakAfterSlashes(text)}</span>
             </a>
         </li>
@@ -48,16 +47,8 @@ export default function Contact({innerRef}) {
     </>;
 
     return (
-        <Box
-            ref={innerRef}
-            id={'contact'}
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                mt: '3rem'
-            }}>
+        <div ref={innerRef} id={'contact'} className={Style.page}>
             <Terminal text={text}/>
-        </Box>
+        </div>
     );
 }

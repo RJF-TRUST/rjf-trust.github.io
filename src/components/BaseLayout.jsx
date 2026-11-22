@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Style from './BaseLayout.module.scss'
 import Navbar from './Navbar';
-import { Box } from '@mui/material';
 import MultiPageRoutes from './MultiPageRoutes';
 import { singlePage } from '../info/Info';
 import SinglePageRoutes from './SinglePageRoutes';
@@ -35,34 +34,23 @@ export default function BaseLayout() {
    }, [])
 
    return (
-      <Box className={darkMode ? Style.dark : Style.light}>
-         {/* Page shell: navbar, content and footer stacked in a full-height column.
-             MUI 9 removed GridLegacy (`item`), and Grid no longer supports column layouts. */}
-         <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-                   minHeight: '100vh', width: '100%'}}>
-            <Box>
+      <div className={darkMode ? Style.dark : Style.light}>
+         {/* Page shell: navbar, content and footer stacked in a full-height column. */}
+         <div className={Style.shell}>
+            <div>
                <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} active={active} setActive={setActive} />
-            </Box>
-            <Box sx={{flexGrow: 1}}>
+            </div>
+            <div className={Style.content}>
                {singlePage ? <SinglePageRoutes refs={{refHome, refAbout, refContact}}/> : <MultiPageRoutes />}
-            </Box>
-            <Box>
-               <Box
-                  component={'footer'}
-                  sx={{
-                     display: 'flex',
-                     flexDirection: 'column',
-                     alignItems: 'center',
-                     py: '1.5rem',
-                     width: '100%',
-                     opacity: 0.7
-                  }}>
+            </div>
+            <div>
+               <footer className={Style.footer}>
                   <p>portfolio created &#10000; by <a href={'https://jacky.fan.nz/'}>Jacky Fan</a></p>
                   <p>copyright© 2026</p>
-               </Box>
-            </Box>
-         </Box>
-      </Box>
+               </footer>
+            </div>
+         </div>
+      </div>
    );
 }
 

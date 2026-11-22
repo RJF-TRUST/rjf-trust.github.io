@@ -1,4 +1,4 @@
-import {Facebook, GitHub, Instagram, LinkedIn, X} from "@mui/icons-material";
+import {Facebook, GitHub, Instagram, LinkedIn, X} from "../components/icons/Icons";
 import self from "../img/self.png"
 
 
@@ -95,8 +95,8 @@ export const info = {
             icon: X,
             label: 'twitter'
         }
-// Feel free to remove any of these that you don't have. `icon` is any component from @mui/icons-material
-// (https://mui.com/material-ui/material-icons/); import it at the top of this file.
+// Feel free to remove any of these that you don't have. `icon` is an icon component from
+// src/components/icons/Icons.jsx; to add one, add its SVG path there and import it at the top of this file.
 // Just change the links so that they lead to your social profiles.
 
     ],

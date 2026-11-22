@@ -5,7 +5,7 @@ function SocialIcon(props) {
     return (
         <a target="_blank" aria-label={label}
            rel="noopener noreferrer" href={link}>
-            <Icon fontSize={'inherit'} aria-hidden={'true'}/>
+            <Icon/>
         </a>
     );
 }

@@ -20,6 +20,14 @@
 }
 
 .terminal {
+  width: 80%;
+  margin-bottom: 4rem;
+  border-radius: 0.5rem;
+
+  @media (min-width: 900px) {
+    width: 50%;
+  }
+
   p, li {
     margin: 1rem 0;
     color: $white;
@@ -28,6 +36,25 @@
   a, a:visited {
     animation: changeColors 3s infinite;
     font-weight: bold;
+  }
+}
+
+.titleBar {
+  padding: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #8c8c8c;
+  font-size: 1rem;
+}
+
+.body {
+  padding: 1rem 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #27242f;
+  font-family: Courier New, Courier, monospace;
+  font-size: 1.5rem;
+
+  @media (min-width: 900px) {
+    padding: 2rem 3rem;
   }
 }
 

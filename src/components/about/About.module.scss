@@ -1,5 +1,17 @@
 @import "../../variables.modules";
 
+// Page column that centres the terminal windows.
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.hobbyEmoji {
+  margin-right: 1rem;
+}
+
 .pink {
   color: $pink;
 }

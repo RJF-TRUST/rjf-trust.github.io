@@ -4,6 +4,28 @@ footer {
   color: $dark;
 }
 
+.shell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  opacity: 0.7;
+}
+
 .dark {
   background-color: $dark;
   color: $white;

@@ -4,10 +4,6 @@
   "homepage": "https://jacky.fan.nz",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^9.5.0",
-    "@mui/material": "^9.5.0",
     "classnames": "^2.5.1",
     "postcss": "^8.5.23",
     "react": "^19.3.1",

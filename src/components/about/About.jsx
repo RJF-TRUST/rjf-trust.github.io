@@ -1,7 +1,6 @@
 import React from 'react';
 import Style from './About.module.scss';
 import Terminal from "./Terminal";
-import {Box} from "@mui/material";
 import {info} from "../../info/Info";
 
 
@@ -46,9 +45,7 @@ export default function About({innerRef}) {
                     className={Style.green}>(main)</span> $</span> ls</p>
                 <ul>
                     {info.hobbies.map((hobby, index) => (
-                        <li key={index}><Box component={'span'} sx={{
-                            mr: '1rem'
-                        }}>{hobby.emoji}</Box>{hobby.label}</li>
+                        <li key={index}><span className={Style.hobbyEmoji}>{hobby.emoji}</span>{hobby.label}</li>
                     ))}
                 </ul>
             </>
@@ -56,18 +53,10 @@ export default function About({innerRef}) {
     }
 
     return (
-        <Box
-            ref={innerRef}
-            id={'about'}
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                mt: '3rem'
-            }}>
+        <div ref={innerRef} id={'about'} className={Style.page}>
             <Terminal text={aboutMeText()}/>
             <Terminal text={skillsText()}/>
             <Terminal text={miscText()}/>
-        </Box>
+        </div>
     );
 }
